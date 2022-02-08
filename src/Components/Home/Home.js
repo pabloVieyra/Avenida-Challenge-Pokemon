@@ -6,11 +6,11 @@ const Home = () => {
        <Box
         sx={{
           background: '#a4a4a4',
+  
         }}>
           
        <Container
         sx={{
-          margin: '3rem auto',
           display: 'flex',
           alignItems: 'center',
           flexDirection: 'column',

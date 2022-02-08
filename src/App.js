@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {Suspense,lazy} from 'react';
+import './App.css';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
-import Pokedex from './Components/Pokedex/Pokedex';
-import Home from './Components/Home/Home';
-import Layout from './Components/Layout/Layout';
-
-
+import LazyLoad from './Components/LazyLoad/LazyLoad';
+const Pokedex = lazy(()=> import('./Components/Pokedex/Pokedex'));
+const Home  = lazy(()=> import('./Components/Home/Home'));
+const Layout = lazy(()=> import('./Components/Layout/Layout'));
 
 function App() {
   return (
    <>
+   <Suspense fallback={<LazyLoad/>}>
    <BrowserRouter>
     <Routes >
       <Route path="/" element={<Layout />} >
@@ -18,6 +19,9 @@ function App() {
     </Routes >
  
   </BrowserRouter>
+  
+  </Suspense>
+  
    </>
   );
 }

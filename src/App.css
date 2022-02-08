@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  background-color: brown;
 }
 
 .App-logo {
@@ -7,11 +7,7 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
+
 
 .App-header {
   min-height: 100vh;
@@ -36,4 +32,23 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+.container-table {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bebas Neue', cursive !important;
+  letter-spacing: 1.5px !important;
+}
+p,
+h5,
+h6 {
+  font-family: 'Source Serif Pro', sans-serif !important;
 }
