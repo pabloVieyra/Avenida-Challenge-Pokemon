@@ -10,7 +10,7 @@ export const getPokedex = async () => {
     
     return res.data.data;
   } catch (err) {
-    return err.response.data;
+    return err.response;
   }
 };
 
@@ -23,7 +23,7 @@ export const getAllPokemonsLimit = async (page, limit) => {
 
     return res.data.results;
   } catch (err) {
-    return err.response.data;
+    return err.response;
   }
 };
 
@@ -34,7 +34,7 @@ export const getPokemonsByUrl = async (url) => {
 
     return res.data;
   } catch (err) {
-    return err.response.data;
+    return err.response;
   }
 };
 
@@ -48,7 +48,6 @@ export const getPokemonsByNameAndId = async (name) => {
 
     return res.data;
   } catch (err) {
-    return err.response.data;
   }
 };
 
