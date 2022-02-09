@@ -21,7 +21,7 @@ export const getAllPokemonsLimit = async (page, limit) => {
     const res = await Axios.get(`${POKEMON_URL}?limit=${limit}&offset=${offset}`);
     
 
-    return res.data.data;
+    return res.data.results;
   } catch (err) {
     return err.response.data;
   }
@@ -32,7 +32,7 @@ export const getPokemonsByUrl = async (url) => {
     const res = await Axios.get(url);
     
 
-    return res.data.data;
+    return res.data;
   } catch (err) {
     return err.response.data;
   }
@@ -44,7 +44,7 @@ export const getPokemonsById = async (id) => {
     const res = await Axios.get(`${POKEMON_URL}/${id}`);
     
 
-    return res.data.data;
+    return res.data;
   } catch (err) {
     return err.response.data;
   }
@@ -55,7 +55,7 @@ export const getPokemonsByName = async (name) => {
     const res = await Axios.get(`${POKEMON_URL}/${name}`);
     
 
-    return res.data.data;
+    return res.data;
   } catch (err) {
     return err.response.data;
   }
