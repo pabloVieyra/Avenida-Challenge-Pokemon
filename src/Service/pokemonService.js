@@ -39,18 +39,9 @@ export const getPokemonsByUrl = async (url) => {
 };
 
 
-export const getPokemonsById = async (id) => {
-  try {
-    const res = await Axios.get(`${POKEMON_URL}/${id}`);
-    
 
-    return res.data;
-  } catch (err) {
-    return err.response.data;
-  }
-};
 
-export const getPokemonsByName = async (name) => {
+export const getPokemonsByNameAndId = async (name) => {
   try {
     const res = await Axios.get(`${POKEMON_URL}/${name}`);
     
