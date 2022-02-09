@@ -11,10 +11,9 @@ const SearchPokemon = (props) => {
           onSearch(null);
         }
     }
-
-
     const onClick = (e) =>{
         onSearch(search);
+        
     }
 
   return (
