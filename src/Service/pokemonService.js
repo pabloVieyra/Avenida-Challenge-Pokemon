@@ -15,8 +15,9 @@ export const getPokedex = async () => {
 };
 
 
-export const getAllPokemonsLimit = async (limit=10, offset=0) => {
+export const getAllPokemonsLimit = async (page, limit) => {
   try {
+    const offset = (page - 1) * limit
     const res = await Axios.get(`${POKEMON_URL}?limit=${limit}&offset=${offset}`);
     
 
@@ -25,6 +26,18 @@ export const getAllPokemonsLimit = async (limit=10, offset=0) => {
     return err.response.data;
   }
 };
+
+export const getPokemonsByUrl = async (url) => {
+  try {
+    const res = await Axios.get(url);
+    
+
+    return res.data.data;
+  } catch (err) {
+    return err.response.data;
+  }
+};
+
 
 export const getPokemonsById = async (id) => {
   try {
