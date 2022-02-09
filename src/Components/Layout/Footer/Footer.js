@@ -32,7 +32,7 @@ const Footer = () => {
             flexDirection: { xs: 'column' },
             width: { xs: '100%' },
           }}>
-          <img src={photo} height="120px" />
+          <img src={photo} alt={'logo'} height="120px" />
         </Box>
         <Box
           sx={{

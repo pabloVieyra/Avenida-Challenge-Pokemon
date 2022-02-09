@@ -53,7 +53,7 @@ const Header = () =>  {
               component="div"
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
-              <img src={photo} height="80px"></img>
+              <img src={photo} alt={'logo'} height="80px"></img>
             </Typography> 
             
   
@@ -99,7 +99,7 @@ const Header = () =>  {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
             >
-              <img src={photo} height="80px"></img>
+              <img src={photo} alt={'logo'} height="80px"></img>
             </Typography>
             <Box sx={{
                 flexGrow: 1,

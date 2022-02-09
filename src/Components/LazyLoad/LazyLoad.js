@@ -5,7 +5,7 @@ import './LazyLoad.css'
 const LazyLoad = () => {
   return <div className='Lazy'>
       <header className='Lazy-header '>
-     <img src={photo} height="80px" className='Lazy-logo'></img>
+     <img src={photo} alt={'logo'} height="80px" className='Lazy-logo'></img>
      </header>
   </div>;
 };
