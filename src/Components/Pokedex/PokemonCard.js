@@ -12,11 +12,11 @@ const PokemonCard = ({ pokemon }) => {
   const type = types[0].typename;
 
   return (
-    <Grid key={pokemon.id} item md={4} sm={6} xs={12}>
-      <Card sx={{ maxWidth: 345 }}>
+    <Grid key={pokemon.id} item md={2} sm={6} xs={12}>
+      <Card sx={{ maxWidth: 150 }}>
         <CardMedia
           component="img"
-          height="120"
+         
           image={sprites.front_default}
           alt={name}
         />
