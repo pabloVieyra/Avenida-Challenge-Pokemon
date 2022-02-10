@@ -6,6 +6,8 @@ const Pokedex = lazy(() => import("./Components/Pokedex/Pokedex"));
 const Home = lazy(() => import("./Components/Home/Home"));
 const Layout = lazy(() => import("./Components/Layout/Layout"));
 const Error404 = lazy(() => import("./Components/Error404/Error404"));
+const PokemonDetails = lazy(() => import("./Components/Pokedex/PokeDetails/PokemonDetails"));
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path="/pokedex" element={<Pokedex />} />
+                <Route path="/pokedex/:id" element={<PokemonDetails/>} />
                 <Route element={<Error404 />} path="*" />
               </Route>
             </Routes>

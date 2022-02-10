@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "./Marginer";
+import { Link } from "react-router-dom";
 import photo from "./../../../assets/pokebola-logo.png";
+
+
+
 
 const DetailsContainer = styled.div`
   width: 100%;
@@ -17,6 +21,8 @@ const MediumText = styled.span`
   color: #fff;
   font-weight: 800; ;
 `;
+
+
 
 const SpacedHorizontalContainer = styled.div`
   width: 100%;
@@ -65,7 +71,10 @@ export function CardDetails({ poke }) {
       </SpacedHorizontalContainer>
       <Marginer direction="vertical" margin="1.2em" />
       <SpacedHorizontalContainer>
-        <Details>Details</Details>
+      <Link  to={""+poke.number}>
+        <Details  >Details
+        </Details>
+       </Link>
       </SpacedHorizontalContainer>
       <PokeLogo>
         <img src={photo} alt="pokebola" />
