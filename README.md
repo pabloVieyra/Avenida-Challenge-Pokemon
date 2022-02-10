@@ -1,10 +1,10 @@
 # Challenge Pokemon Avenida
 #### Pokedex
 ## Technical challenge
-####You must implement you own version of the Pokedex:
-####https://pokemon.com/us/pokedex/
-####You must use the infomation from this API:
-####https://pokeapi.co
+#### You must implement you own version of the Pokedex:
+#### https://pokemon.com/us/pokedex/
+#### You must use the infomation from this API:
+#### https://pokeapi.co
 ## Requirements :
 #### -It must have responsive design.
 #### -It must allow you to search pokemons by name or ID.
