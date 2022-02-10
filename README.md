@@ -15,13 +15,13 @@
 #### REACT_APP_POKEMON_URL=https://pokeapi.co/api/v2/pokemon
 
 
-## Fotos Pokedex
+## Photo Pokedex
 ![image](https://user-images.githubusercontent.com/91098592/153456988-0b881335-2003-4dfb-8db8-4fc08b986830.png)
 ![image](https://user-images.githubusercontent.com/91098592/153457030-bd385374-8b00-4b7c-a4b9-1da7080ff631.png)
-## Fotos Celular
+## Photo Celular
 ![image](https://user-images.githubusercontent.com/91098592/153457153-00bb8a20-a2d8-4e1b-a0d4-28af5ba56979.png)
 ![image](https://user-images.githubusercontent.com/91098592/153457218-9e559f58-c342-4557-adcd-33b57defa0a1.png)
-## Fotos Ipad
+## Photo Ipad
 ![image](https://user-images.githubusercontent.com/91098592/153457326-7754280c-fb0e-4528-8e7e-a63ec1207d24.png)
-## Fotos MacBox
+## Photo MacBox
 ![image](https://user-images.githubusercontent.com/91098592/153457603-303cf51e-b8e6-4421-bdfa-6fb843358b35.png)
