@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import {
   getAllPokemonsLimit,
@@ -6,8 +6,12 @@ import {
   getPokemonsByNameAndId,
 } from "../../Service/pokemonService";
 import PokemonList from "./PokemonList";
-import SearchPokemon from "./SearchPokemon";
+import SearchPokemon from "./PokemonSearch/SearchPokemon";
 import { Container } from "@mui/material";
+import PokeLoading from "./PokemonSearch/PokeLoading";
+import SearchError from "./PokemonSearch/SearchError";
+
+
 
 const Pokedex = () => {
   const [page, setPage] = useState(1);
@@ -17,6 +21,7 @@ const Pokedex = () => {
   const [loading, setLoading] = useState();
   const [errorSearch, setErrorSearch] = useState(false);
   const [searching, setSearching] = useState(false);
+  const [search, setSearch] = useState(false);
 
   const ContentPage = async (page, limit) => {
     try {
@@ -28,7 +33,7 @@ const Pokedex = () => {
           return resp;
         }
       });
-      
+
       setLoading(false);
       setPage((resp) => resp + 1);
       setErrorSearch(false);
@@ -36,7 +41,7 @@ const Pokedex = () => {
   };
 
   const ContentPokemon = async () => {
-    
+    setSearch(false);
     pagesList.map(async (pokemon) => {
       const resp = await getPokemonsByUrl(pokemon.url);
       setPokemonList((prevPokemons) => [...prevPokemons, resp]);
@@ -46,12 +51,14 @@ const Pokedex = () => {
   const onSearch = async (pokemon) => {
     if (!pokemon) {
       setLoading(false);
-    setErrorSearch(false);
+      setErrorSearch(false);
       return ContentPokemon();
     }
     setLoading(true);
     setErrorSearch(false);
     setSearching(true);
+    setSearch(true);
+
     const result = await getPokemonsByNameAndId(pokemon);
     if (!result) {
       setErrorSearch(true);
@@ -69,8 +76,6 @@ const Pokedex = () => {
     ContentPage(page, limit);
   }, []);
 
-  
- 
   useEffect(() => {
     if (!searching) {
       ContentPokemon();
@@ -82,28 +87,51 @@ const Pokedex = () => {
   };
 
   return (
-    <div>
-      <h1>Bienvenido A la pokedex</h1>
+    <>
+      <Container
+        align="center"
+        sx={{
+          borderRadius: "25px",
+          my: "2rem",
+          backgroundColor: "#fafaf4  ",
+        }}
+      >
+        <Typography variant="h2" component="div" align="center" gutterBottom>
+          Pokedex
+        </Typography>
+
+        <Container sx={{ my: "2rem" }}>
+          <SearchPokemon onSearch={onSearch}></SearchPokemon>
+        </Container>
+      </Container>
       <Container sx={{ my: "2rem" }}>
-        <SearchPokemon onSearch={onSearch}></SearchPokemon>
         {errorSearch ? (
-          <div> no se encontro el pokemon </div>
+          <SearchError/>
         ) : (
           <>
             {loading ? (
-              <div> Cargando pokemones...</div>
+              <PokeLoading/>
             ) : (
               <>
                 <PokemonList pokedata={pokemonList}></PokemonList>
-                <Button variant="contained" onClick={onclickMore}>
-                  More
-                </Button>
+                {search === true ? (<></>):(<>
+                <p align="center">
+                  <Button
+                    sx={{ background: "#696969" }}
+                    variant="contained"
+                    color="error"
+                    onClick={onclickMore}
+                  >
+                    More
+                  </Button>
+                </p>
+                </>)}
               </>
             )}
           </>
         )}
       </Container>
-    </div>
+    </>
   );
 };
 

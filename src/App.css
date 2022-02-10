@@ -1,13 +1,13 @@
 .App {
-  background-color: brown;
+  background: url(./assets/fondo-pokemon.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-
 
 .App-header {
   min-height: 100vh;
@@ -18,37 +18,20 @@
   font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 .container-table {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 
-h1,
 h2,
 h3,
 h4 {
-  font-family: 'Bebas Neue', cursive !important;
+  font-family: "Bebas Neue", cursive !important;
   letter-spacing: 1.5px !important;
 }
 p,
 h5,
 h6 {
-  font-family: 'Source Serif Pro', sans-serif !important;
+  font-family: "Source Serif Pro", sans-serif !important;
 }

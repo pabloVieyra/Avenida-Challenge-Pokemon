@@ -1,6 +1,6 @@
 import React from "react";
-import PokemonCard from "./PokemonCard";
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
+import PokemonCard from "./PokemonCard/PokemonCard";
 
 const PokemonList = ({ pokedata }) => {
   return (
