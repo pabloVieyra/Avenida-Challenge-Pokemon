@@ -13,13 +13,14 @@ const PokeLoading = () => {
           >
             <Grid item xs={12} sm={7}>
               
-              <img src={loading } alt=""  />
+              <img src={loading } alt="" style={{height:'%100',width:'100%'}}  />
             </Grid>
             <Grid item xs={12} sm={5}>
               <Typography
                 variant="h3"
                 component="p"
                 textAlign="center"
+                style={{height:'%100',width:'100%'}}
               >
                 Cargando...
               </Typography>

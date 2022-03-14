@@ -12,6 +12,7 @@ const DetailsContainer = styled.div`
   flex-direction: column;
   padding: 2.5em 6px 0 6px;
   line-height: 1.4;
+  margin: 5%;
 `;
 
 

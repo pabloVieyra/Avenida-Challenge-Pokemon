@@ -12,7 +12,7 @@ const SearchError = () => {
             }}
           >
             <Grid item xs={12} sm={7}>
-              <img src={searchError} alt="" />
+              <img src={searchError} style={{height:'%100',width:'100%'}}alt="" />
             </Grid>
 
             
@@ -21,6 +21,7 @@ const SearchError = () => {
                 variant="h3"
                 component="p"
                 textAlign="center"
+                style={{height:'%100',width:'100%'}}
               >
                 Oops.. No se puedo encontrar el Pokemon
               </Typography>
